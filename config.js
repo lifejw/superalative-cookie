@@ -144,7 +144,7 @@ var klaroConfig = {
         },
         en: {
             consentModal: {
-                title: '<u>test</u>',
+            privacyPolicyUrl: '/legal/privacy-policy',
                 description:
                     'Here you can see and customize the information that we collect about you.',
             },
