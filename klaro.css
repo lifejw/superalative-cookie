@@ -61,15 +61,15 @@ We declare all variables here as default so that they are easy to override...
 .klaro .cookie-modal .cm-list-input:checked + .cm-list-label .slider,
 .klaro .context-notice .cm-list-input:checked + .cm-list-label .slider,
 .klaro .cookie-notice .cm-list-input:checked + .cm-list-label .slider {
-  background-color: #C6CC25;
-  background-color: var(--green1, #C6CC25);
+  background-color: #90941B;
+  background-color: var(--green1, #90941B);
 }
 
 .klaro .cookie-modal .cm-list-input.half-checked:checked + .cm-list-label .slider,
 .klaro .context-notice .cm-list-input.half-checked:checked + .cm-list-label .slider,
 .klaro .cookie-notice .cm-list-input.half-checked:checked + .cm-list-label .slider {
-  background-color: #C6CC25;
-  background-color: var(--green1, #C6CC25);
+  background-color: #90941B;
+  background-color: var(--green1, #90941B);
   opacity: 0.6;
 }
 
@@ -227,8 +227,8 @@ We declare all variables here as default so that they are easy to override...
 .klaro .cookie-modal a,
 .klaro .context-notice a,
 .klaro .cookie-notice a {
-  color: #C6CC25;
-  color: var(--green1, #C6CC25);
+  color: #90941B;
+  color: var(--green1, #90941B);
   text-decoration: none;
 }
 
@@ -314,8 +314,8 @@ We declare all variables here as default so that they are easy to override...
 .klaro .cookie-modal .cm-btn.cm-btn-success,
 .klaro .context-notice .cm-btn.cm-btn-success,
 .klaro .cookie-notice .cm-btn.cm-btn-success {
-  background: #C6CC25;
-  background: var(--green1, #C6CC25);
+  background: #90941B;
+  background: var(--green1, #90941B);
 }
 
 .klaro .cookie-modal .cm-btn.cm-btn-success-var,
@@ -467,7 +467,6 @@ We declare all variables here as default so that they are easy to override...
 
 .klaro .cookie-modal .cm-modal .cm-header h1 {
   margin: 0;
-  padding: 0;
   font-size: 2em;
   display: block;
 }
