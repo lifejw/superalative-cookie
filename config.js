@@ -51,7 +51,7 @@ var klaroConfig = {
     cookieDomain: 'jonathanwerner.xyz',
 
     // Defines the default state for services (true=enabled by default).
-    default: false,
+    default: true,
 
     // If "mustConsent" is set to true, Klaro will directly display the consent
     // manager modal and not allow the user to close it before having actively
@@ -115,7 +115,6 @@ var klaroConfig = {
             name: 'googleAnalytics',
 			title: 'Google Analytics',
             purposes: ['Analytics'],
-            default: true,
 			required: false,
 			optOut: false,
         },
@@ -123,7 +122,6 @@ var klaroConfig = {
             name: 'youtube',
 			title: 'YouTube',
             purposes: ['experience'],
-            default: true,
 			required: true,
 			optOut: false,
         },
@@ -131,7 +129,6 @@ var klaroConfig = {
             name: 'vimeo',
 			title: 'Vimeo',
             purposes: ['experience'],
-            default: true,
 			required: true,
 			optOut: false,
         },
@@ -139,7 +136,6 @@ var klaroConfig = {
             name: 'googleFonts',
             title: 'Google Fonts',
             purposes: ['functional'],
-			default: true,
 			required: true,
 			optOut: false,
         },
