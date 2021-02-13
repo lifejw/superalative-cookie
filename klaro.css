@@ -61,15 +61,15 @@ We declare all variables here as default so that they are easy to override...
 .klaro .cookie-modal .cm-list-input:checked + .cm-list-label .slider,
 .klaro .context-notice .cm-list-input:checked + .cm-list-label .slider,
 .klaro .cookie-notice .cm-list-input:checked + .cm-list-label .slider {
-  background-color: #1a936f;
-  background-color: var(--green1, #1a936f);
+  background-color: #90941B;
+  background-color: var(--green1, #90941B);
 }
 
 .klaro .cookie-modal .cm-list-input.half-checked:checked + .cm-list-label .slider,
 .klaro .context-notice .cm-list-input.half-checked:checked + .cm-list-label .slider,
 .klaro .cookie-notice .cm-list-input.half-checked:checked + .cm-list-label .slider {
-  background-color: #1a936f;
-  background-color: var(--green1, #1a936f);
+  background-color: #90941B;
+  background-color: var(--green1, #90941B);
   opacity: 0.6;
 }
 
@@ -83,8 +83,8 @@ We declare all variables here as default so that they are easy to override...
 .klaro .cookie-modal .cm-list-input.only-required + .cm-list-label .slider,
 .klaro .context-notice .cm-list-input.only-required + .cm-list-label .slider,
 .klaro .cookie-notice .cm-list-input.only-required + .cm-list-label .slider {
-  background-color: #24cc9a;
-  background-color: var(--green2, #24cc9a);
+  background-color: #C6CC25;
+  background-color: var(--green2, #C6CC25);
   opacity: 0.8;
 }
 
@@ -98,8 +98,8 @@ We declare all variables here as default so that they are easy to override...
 .klaro .cookie-modal .cm-list-input.required:checked + .cm-list-label .slider,
 .klaro .context-notice .cm-list-input.required:checked + .cm-list-label .slider,
 .klaro .cookie-notice .cm-list-input.required:checked + .cm-list-label .slider {
-  background-color: #24cc9a;
-  background-color: var(--green2, #24cc9a);
+  background-color: #C6CC25;
+  background-color: var(--green2, #C6CC25);
   opacity: 0.8;
   cursor: not-allowed;
 }
@@ -193,9 +193,9 @@ We declare all variables here as default so that they are easy to override...
 .klaro .cookie-modal .cm-list-label input:focus + .slider,
 .klaro .context-notice .cm-list-label input:focus + .slider,
 .klaro .cookie-notice .cm-list-label input:focus + .slider {
-  box-shadow-color: #48dfb2;
-  box-shadow-color: var(--green3, #48dfb2);
-  box-shadow: 0 0 1px #48dfb2;
+  box-shadow-color: #D9DE47;
+  box-shadow-color: var(--green3, #D9DE47);
+  box-shadow: 0 0 1px #D9DE47;
 }
 
 .klaro .cookie-modal .cm-list-label input:checked + .slider::before,
@@ -227,8 +227,8 @@ We declare all variables here as default so that they are easy to override...
 .klaro .cookie-modal a,
 .klaro .context-notice a,
 .klaro .cookie-notice a {
-  color: #1a936f;
-  color: var(--green1, #1a936f);
+  color: #90941B;
+  color: var(--green1, #90941B);
   text-decoration: none;
 }
 
@@ -314,15 +314,15 @@ We declare all variables here as default so that they are easy to override...
 .klaro .cookie-modal .cm-btn.cm-btn-success,
 .klaro .context-notice .cm-btn.cm-btn-success,
 .klaro .cookie-notice .cm-btn.cm-btn-success {
-  background: #1a936f;
-  background: var(--green1, #1a936f);
+  background: #90941B;
+  background: var(--green1, #90941B);
 }
 
 .klaro .cookie-modal .cm-btn.cm-btn-success-var,
 .klaro .context-notice .cm-btn.cm-btn-success-var,
 .klaro .cookie-notice .cm-btn.cm-btn-success-var {
-  background: #24cc9a;
-  background: var(--green2, #24cc9a);
+  background: #C6CC25;
+  background: var(--green2, #C6CC25);
 }
 
 .klaro .cookie-modal .cm-btn.cm-btn-info,
@@ -707,4 +707,3 @@ We declare all variables here as default so that they are easy to override...
 .klaro .cookie-notice-hidden {
   display: none !important;
 }
-
