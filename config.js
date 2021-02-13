@@ -87,8 +87,7 @@ var klaroConfig = {
 			title: 'Consent Manager',
             privacyPolicyUrl: 'https://jonathanwerner.xyz/legal/privacy-policy',
                 description:
-                    'Here you can see and customize the information that gets collected about you.'+
-					'To lear more, please check the privacy policy.',
+                    'Here you can see and customize the information that gets collected about you.'
             },
             googleFonts: {
                 description: 'Web fonts hosted by Google',
