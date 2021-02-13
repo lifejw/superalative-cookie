@@ -79,12 +79,16 @@ var klaroConfig = {
     // Example config that shows how to overwrite translations:
     // https://github.com/KIProtect/klaro/blob/master/src/configs/i18n.js
     translations: {
+		 zz: {
+            privacyPolicyUrl: 'https://jonathanwerner.xyz/legal/privacy-policy',
+        },
          en: {
             consentModal: {
 			title: 'Consent Manager',
             privacyPolicyUrl: 'https://jonathanwerner.xyz/legal/privacy-policy',
                 description:
-                    'Here you can see and customize the information that gets collected about you.',
+                    'Here you can see and customize the information that gets collected about you.'+
+					'To lear more, please check the privacy policy.',
             },
             googleFonts: {
                 description: 'Web fonts hosted by Google',
