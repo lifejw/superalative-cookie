@@ -51,7 +51,7 @@ var klaroConfig = {
     cookieDomain: 'jonathanwerner.xyz',
 
     // Defines the default state for services (true=enabled by default).
-    default: true,
+    default: false,
 
     // If "mustConsent" is set to true, Klaro will directly display the consent
     // manager modal and not allow the user to close it before having actively
