@@ -116,6 +116,7 @@ var klaroConfig = {
 			title: 'Google Analytics',
             purposes: ['Analytics'],
 			required: false,
+			default: true,
 			optOut: false,
         },
 		{
