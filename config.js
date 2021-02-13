@@ -2,6 +2,8 @@ var klaroConfig = {
     // With the 0.7.0 release we introduce a 'version' paramter that will make
     // if easier for us to keep configuration files backwards-compatible in the future.
     version: 1,
+	
+    testing: true,
 
     // You can customize the ID of the DIV element that Klaro will create
     // when starting up. If undefined, Klaro will use 'klaro'.
