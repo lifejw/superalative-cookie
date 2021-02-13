@@ -1,7 +1,3 @@
-// By default, Klaro will load the config from  a global "klaroConfig" variable.
-// You can change this by specifying the "data-config" attribute on your
-// script take, e.g. like this:
-// <script src="klaro.js" data-config="myConfigVariableName" />
 var klaroConfig = {
     // With the 0.7.0 release we introduce a 'version' paramter that will make
     // if easier for us to keep configuration files backwards-compatible in the future.
