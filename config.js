@@ -51,7 +51,7 @@ var klaroConfig = {
     cookieDomain: 'jonathanwerner.xyz',
 
     // Defines the default state for services (true=enabled by default).
-    default: false,
+    default: true,
 
     // If "mustConsent" is set to true, Klaro will directly display the consent
     // manager modal and not allow the user to close it before having actively
@@ -63,29 +63,13 @@ var klaroConfig = {
     acceptAll: true,
 
     // replace "decline" with cookie manager modal
-    hideDeclineAll: false,
+    hideDeclineAll: true,
 
-    // hide "learnMore" link
     hideLearnMore: false,
 
-    // show cookie notice as modal
     noticeAsModal: false,
 
-    // You can also remove the 'Realized with Klaro!' text in the consent modal.
-    // Please don't do this! We provide Klaro as a free open source tool.
-    // Placing a link to our website helps us spread the word about it,
-    // which ultimately enables us to make Klaro! better for everyone.
-    // So please be fair and keep the link enabled. Thanks :)
-    //disablePoweredBy: true,
-
-    // you can specify an additional class (or classes) that will be added to the Klaro `div`
-    //additionalClass: 'my-klaro',
-
-    // You can define the UI language directly here. If undefined, Klaro will
-    // use the value given in the global "lang" variable. If that does
-    // not exist, it will use the value given in the "lang" attribute of your
-    // HTML tag. If that also doesn't exist, it will use 'en'.
-    //lang: 'en',
+    lang: 'en',
 
     // You can overwrite existing translations and add translations for your
     // service descriptions and purposes. See `src/translations/` for a full
@@ -95,24 +79,24 @@ var klaroConfig = {
     // Example config that shows how to overwrite translations:
     // https://github.com/KIProtect/klaro/blob/master/src/configs/i18n.js
     translations: {
-        // translationsed defined under the 'zz' language code act as default
-        // translations.
-        zz: {
-            privacyPolicyUrl: 'https://jonathanwerner.xyz/legal/privacy-policy',
-        },
-        // If you erase the "consentModal" translations, Klaro will use the
-        // bundled translations.
-        en: {
+         en: {
             consentModal: {
+			title: 'Consent Manager',
             privacyPolicyUrl: 'https://jonathanwerner.xyz/legal/privacy-policy',
                 description:
-                    'Here you can see and customize the information that we collect about you.',
+                    'Here you can see and customize the information that gets collected about you.',
             },
             googleFonts: {
                 description: 'Web fonts hosted by Google',
             },
-			YouTube: {
+			youtube: {
                 description: 'Videos for the experience hosted on Googles YouTube Plattform',
+            },
+			vimeo: {
+                description: 'Videos for the experience hosted on the Vimeo Plattform',
+            },
+			googleAnalytics: {
+                description: 'Collecting of visitor statistics',
             },
             purposes: {
                 analytics: 'Analytics',
@@ -120,6 +104,7 @@ var klaroConfig = {
                 advertising: 'Advertising',
                 styling: 'Styling',
 				experience: 'Experience',
+				functional: 'Functional',
             },
         },
     },
@@ -127,18 +112,36 @@ var klaroConfig = {
     // This is a list of third-party services that Klaro will manage for you.
     services: [
         {
+            name: 'googleAnalytics',
+			title: 'Google Analytics',
+            purposes: ['Analytics'],
+            default: true,
+			required: false,
+			optOut: false,
+        },
+		{
             name: 'youtube',
 			title: 'YouTube',
             purposes: ['experience'],
             default: true,
 			required: true,
+			optOut: false,
+        },
+		{
+            name: 'vimeo',
+			title: 'Vimeo',
+            purposes: ['experience'],
+            default: true,
+			required: true,
+			optOut: false,
         },
         {
             name: 'googleFonts',
             title: 'Google Fonts',
-            purposes: ['styling'],
+            purposes: ['functional'],
 			default: true,
 			required: true,
+			optOut: false,
         },
 
     ],
