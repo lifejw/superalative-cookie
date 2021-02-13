@@ -679,8 +679,8 @@ We declare all variables here as default so that they are easy to override...
       transform: translateY(-50%);
   position: fixed;
   overflow: auto;
-  background: #555;
-  color: #ffff00;
+  background: #333;
+  color: #eee;
   padding: 1em;
   padding-top: 0.2em;
 }
