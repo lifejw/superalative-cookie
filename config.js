@@ -2,7 +2,13 @@ var klaroConfig = {
     // With the 0.7.0 release we introduce a 'version' paramter that will make
     // if easier for us to keep configuration files backwards-compatible in the future.
     version: 1,
-	
+	/*
+    Die Einstellung von "testing" auf "true" bewirkt, dass Klaro die
+    Einverständniserklärung oder modal standardmäßig nicht anzeigt, außer wenn ein
+    spezieller Hash-Tag an die URL angehängt ist (#klaro-testing). Dadurch ist es
+    möglich, Klaro auf Ihrer Live-Website zu testen, ohne normale Besucher zu
+    beeinträchtigen.
+    */
     testing: true,
 
     // You can customize the ID of the DIV element that Klaro will create
@@ -42,7 +48,7 @@ var klaroConfig = {
     // You can change to cookie domain for the consent manager itself.
     // Use this if you want to get consent once for multiple matching domains.
     // If undefined, Klaro will use the current domain.
-    //cookieDomain: '.github.com',
+    cookieDomain: 'jonathanwerner.xyz',
 
     // Defines the default state for services (true=enabled by default).
     default: false,
@@ -92,96 +98,28 @@ var klaroConfig = {
         // translationsed defined under the 'zz' language code act as default
         // translations.
         zz: {
-            privacyPolicyUrl: '/legal/privacy-policy',
+            privacyPolicyUrl: 'https://jonathanwerner.xyz/legal/privacy-policy',
         },
         // If you erase the "consentModal" translations, Klaro will use the
         // bundled translations.
-        de: {
-            privacyPolicyUrl: '/legal/privacy-policy',
-            consentModal: {
-                description:
-                    'Hier können Sie einsehen und anpassen, welche Information wir über Sie sammeln.',
-            },
-            inlineTracker: {
-                description: 'Beispiel für ein Inline-Tracking Skript',
-            },
-            externalTracker: {
-                description: 'Beispiel für ein externes Tracking Skript',
-            },
-            adsense: {
-                description: 'Anzeigen von Werbeanzeigen (Beispiel)',
-                title: 'Google AdSense Werbezeugs',
-            },
-            matomo: {
-                description: 'Sammeln von Besucherstatistiken',
-            },
-            camera: {
-                description:
-                    'Eine Überwachungskamera (nur ein Beispiel zu IMG-Tags)',
-            },
-            cloudflare: {
-                description: 'Schutz gegen DDoS-Angriffe',
-            },
-            intercom: {
-                description:
-                    'Chat Widget & Sammeln von Besucherstatistiken (nur ein Beispiel)',
-            },
-            mouseflow: {
-                description: 'Echtzeit-Benutzeranalyse (nur ein Beispiel)',
-            },
-            googleFonts: {
-                description: 'Web-Schriftarten von Google gehostet',
-            },
-            purposes: {
-                analytics: 'Besucher-Statistiken',
-                security: 'Sicherheit',
-                livechat: 'Live Chat',
-                advertising: 'Anzeigen von Werbung',
-                styling: 'Styling',
-            },
-        },
         en: {
             consentModal: {
-            privacyPolicyUrl: '/legal/privacy-policy',
+            privacyPolicyUrl: 'https://jonathanwerner.xyz/legal/privacy-policy',
                 description:
                     'Here you can see and customize the information that we collect about you.',
-            },
-            inlineTracker: {
-                description: 'Example of an inline tracking script',
-            },
-            externalTracker: {
-                description: 'Example of an external tracking script',
-            },
-            adsense: {
-                description: 'Displaying of advertisements (just an example)',
-                title: 'Google Adsense Advertisement',
-            },
-            matomo: {
-                description: 'Collecting of visitor statistics',
-            },
-            camera: {
-                description:
-                    'A surveillance camera (just an example for an IMG tag)',
-            },
-            cloudflare: {
-                description: 'Protection against DDoS attacks',
-            },
-            intercom: {
-                description:
-                    'Chat widget & collecting of visitor statistics (just an example)',
-            },
-            mouseflow: {
-                description: 'Real-Time user analytics (just an example)',
             },
             googleFonts: {
                 description: 'Web fonts hosted by Google',
             },
+			YouTube: {
+                description: 'Videos for the experience hosted on Googles YouTube Plattform',
+            },
             purposes: {
                 analytics: 'Analytics',
                 security: 'Security',
-                livechat: 'Livechat',
                 advertising: 'Advertising',
                 styling: 'Styling',
+				experience: 'Experience',
             },
         },
     },
@@ -189,40 +127,11 @@ var klaroConfig = {
     // This is a list of third-party services that Klaro will manage for you.
     services: [
         {
-            name: 'twitter',
-            purposes: ['marketing'],
-            // Setting this to true will exempt this service from the "Accept All"
-            // flow, i.e. clicking on "Accept All" will not enable this service.
-            contextualConsentOnly: false,
-        },
-        {
             name: 'youtube',
-            purposes: ['marketing'],
-            contextualConsentOnly: true,
-        },
-        
-
-        // The services will appear in the modal in the same order as defined here.
-        /*{
-            name: 'inlineTracker',
-            title: 'Inline Tracker',
-            purposes: ['analytics'],
-            cookies: ['inline-tracker'],
-            optOut: false,
-        },
-        {
-            name: 'externalTracker',
-            title: 'External Tracker',
-            purposes: ['analytics', 'security'],
-            cookies: ['external-tracker'],
-        },*/
-        {
-            name: 'googleAnalytics',
-            title: 'Google Analytics',
-            purposes: ['analytics'],
-			cookies: [
-                [/^_g.*$/, '/', '.webflow.io'], // delete already set cookies at loading time of Klaro
-			optOut: false,
+			title: 'YouTube',
+            purposes: ['experience'],
+            default: true,
+			required: true,
         },
         {
             name: 'googleFonts',
